@@ -12,7 +12,7 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Checkbox = forwardRef<HTMLInputElement, IInputProps>(({ ...props }, ref) => {
   return (
     <div className={styles.checkbox}>
-      <input {...props} />
+      <input {...props} ref={ref} />
       {props.label && <label htmlFor={props.id}>{props.label}</label>}
     </div>
   );
