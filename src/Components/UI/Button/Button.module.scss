@@ -1,0 +1,27 @@
+@import '../../../Assets/scss/base/vars';
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 16px 32px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  justify-content: center;
+  align-items: center;
+  transition: $transition;
+  cursor: pointer;
+
+  &__primary {
+    background-color: $primary-color-500;
+    color: $color-white;
+
+    &:hover {
+      background-color: $primary-color-600;
+    }
+    &:active {
+      background-color: $primary-color-700;
+    }
+  }
+}
