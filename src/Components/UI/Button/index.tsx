@@ -2,8 +2,8 @@ import styles from './Button.module.scss';
 import classNames from 'classnames';
 
 interface IProps {
-  startIcon?: any;
-  endIcon?: any;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'tertiary';
   children: React.ReactNode;
 }

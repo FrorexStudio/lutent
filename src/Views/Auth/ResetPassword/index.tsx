@@ -9,15 +9,18 @@ import { SocialButton } from '../../../Components/UI/SocialButton';
 import { Button } from '../../../Components/UI/Button';
 
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { joiResolver } from '@hookform/resolvers/joi';
+// import { joiResolver } from '@hookform/resolvers/joi';
 import Joi from 'joi';
+import { useState } from 'react';
 
 const schema = Joi.object({
   login: Joi.string().required(),
-  email: Joi.string().required(),
-  password: Joi.string().required(),
-  repeatPassword: Joi.string().required(),
-  chooseCb: Joi.boolean().valid(true)
+  email: Joi.string().email().required(),
+  password: Joi.string().min(6).required(),
+  repeatPassword: Joi.string().valid(Joi.ref('password')).required().messages({
+    'any.only': 'Passwords must match'
+  }),
+  chooseCb: Joi.boolean().valid(true).required()
 });
 
 interface IForm {
@@ -29,13 +32,35 @@ interface IForm {
 }
 
 export const ResetPassword = () => {
-  const { register, handleSubmit } = useForm<IForm>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<IForm>();
+  const [formError, setFormError] = useState<string | null>(null);
+
   // {
-  // resolver: joiResolver(schema)
+  //   resolver: joiResolver(schema);
   // }
+  // const onSubmit: SubmitHandler<IForm> = async (data) => {
+  //   console.log(data);
+  // };
+
   const onSubmit: SubmitHandler<IForm> = async (data) => {
-    console.log(data);
+    try {
+      await schema.validateAsync(data);
+      console.log(data);
+    } catch (error: any) {
+      setFormError(error.details[0].message);
+    }
   };
+
+  // Display validation errors
+  console.log(errors);
+
+  // Handle form error
+  console.log(formError);
+
   return (
     <header className={classNames(styles.Auth, styles.wrapper)}>
       <div className={styles.block}>
