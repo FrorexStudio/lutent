@@ -16,9 +16,8 @@ export const AppRouter = () => {
       <Route path={'/'} element={<Home />} />
       <Route path={'*'} element={<ErrorPage />} />
 
-      <Route path={'/events'} element={<Events />}>
-        <Route path={'/:id'} element={<Event />} />
-      </Route>
+      <Route path={'/events'} element={<Events />} />
+      <Route path={'/events/:id'} element={<Event />} />
       <Route path={'/profile'}>
         <Route path={'/account'} element={<Account />} />
         <Route path={'/wishlist'} element={<WishList />} />
