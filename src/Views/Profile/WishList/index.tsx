@@ -1,7 +1,7 @@
 import logo from '../../../logo.svg';
 import './WishList.module.scss';
 
-export const WishList = ({}) => {
+export const WishList = () => {
   return (
     <div className="Home">
       <header className="Home-header">

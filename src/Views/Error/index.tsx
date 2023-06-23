@@ -1,7 +1,7 @@
 import logo from '../../logo.svg';
 import './ErrorPage.module.scss';
 
-export const ErrorPage = ({}) => {
+export const ErrorPage = () => {
   return (
     <div className="Home">
       <header className="Home-header">

@@ -1,7 +1,7 @@
 import logo from '../../logo.svg';
 import './Events.module.scss';
 
-export const Events = ({}) => {
+export const Events = () => {
   return (
     <div className="Home">
       <header className="Home-header">

@@ -1,7 +1,7 @@
 import logo from '../../../logo.svg';
 import './Account.module.scss';
 
-export const Account = ({}) => {
+export const Account = () => {
   return (
     <div className="Home">
       <header className="Home-header">

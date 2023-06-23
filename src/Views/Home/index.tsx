@@ -1,7 +1,7 @@
 import logo from '../../logo.svg';
 import './Home.module.scss';
 
-export const Home = ({}) => {
+export const Home = () => {
   return (
     <div className="Home">
       <header className="Home-header">
