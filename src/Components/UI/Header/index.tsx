@@ -5,12 +5,6 @@ import classNames from 'classnames';
 import { Input } from '../Input';
 import { Button } from '../Button';
 
-
-
 export const Header = () => {
-  return (
-    <header className={classNames(styles.Auth, styles.wrapper)}>
-      
-    </header>
-  );
+  return <header className={classNames(styles.Auth, styles.wrapper)}></header>;
 };
