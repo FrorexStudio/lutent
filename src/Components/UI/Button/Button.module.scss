@@ -1,4 +1,4 @@
-@import '../../../Assets/scss/base/vars';
+@use '../../../Assets/scss/utils/index' as *;
 
 .btn {
   display: flex;
@@ -14,14 +14,20 @@
   cursor: pointer;
 
   &__primary {
-    background-color: $primary-color-500;
+    background-color: $color-primary-500;
     color: $color-white;
 
     &:hover {
-      background-color: $primary-color-600;
+      background-color: $color-primary-600;
     }
     &:active {
-      background-color: $primary-color-700;
+      background-color: $color-primary-700;
+    }
+    &:focus-within,
+    &:focus {
+      // border-color: blue;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #dde6fa;
+      outline: none;
     }
   }
 }

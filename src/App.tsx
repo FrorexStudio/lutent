@@ -1,10 +1,10 @@
 import './Assets/scss/index.scss';
-import { Header } from './Components/UI/Header';
+import { AppRouter } from './Routes/AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <AppRouter />
     </div>
   );
 }

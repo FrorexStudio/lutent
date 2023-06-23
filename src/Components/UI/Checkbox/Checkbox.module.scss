@@ -1,8 +1,8 @@
-@import '../../../Assets/scss/base/vars';
+@use '../../../Assets/scss/utils/index' as *;
 
 .checkbox {
   display: flex;
   flex-direction: row;
-  accent-color: $primary-color-500;
+  accent-color: $color-primary-500;
   gap: 4px;
 }
