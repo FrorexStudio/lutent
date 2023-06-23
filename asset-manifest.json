@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "//lutent/static/css/main.82a4a4b4.css",
+    "main.js": "//lutent/static/js/main.0b2ccb67.js",
+    "static/js/787.617000bc.chunk.js": "//lutent/static/js/787.617000bc.chunk.js",
+    "static/media/logo.svg": "//lutent/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "//lutent/index.html",
+    "main.82a4a4b4.css.map": "//lutent/static/css/main.82a4a4b4.css.map",
+    "main.0b2ccb67.js.map": "//lutent/static/js/main.0b2ccb67.js.map",
+    "787.617000bc.chunk.js.map": "//lutent/static/js/787.617000bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82a4a4b4.css",
+    "static/js/main.0b2ccb67.js"
+  ]
+}
